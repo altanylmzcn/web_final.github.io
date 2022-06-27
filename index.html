@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <title>Altan Car Parts</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+
+   <style>
+      .modal {
+         display: none;
+         position: fixed;
+         z-index: 1;
+         padding-top: 100px;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto;
+         background-color: rgb(0, 0, 0);
+         background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .card {
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         margin: 19px;
+         text-align: center;
+         font-family: arial;
+         float: left;
+         width: 30%;
+         padding: 55px;
+         height: 330px;
+      }
+
+      .price {
+         color: grey;
+         font-size: 22px;
+      }
+
+      .card button {
+         border: none;
+         outline: 0;
+         padding: 12px;
+         color: white;
+         background-color: #000;
+         text-align: center;
+         cursor: pointer;
+         width: 100%;
+         font-size: 15px;
+      }
+
+      .card button:hover {
+         opacity: 0.7;
+      }
+
+
+      .modal-content {
+         background-color: #fefefe;
+         margin: auto;
+         padding: 20px;
+         border: 1px solid #888;
+         width: 80%;
+      }
+
+      .close {
+         color: #aaaaaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+      }
+   </style>
+
+</head>
+
+<body class="main-layout">
+
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <header>
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <h1>Altan Car Part</h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item">
+                              <a class="nav-link" href="index.html"> Anasayfa </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#" onclick="handleAbout();">Hakkında</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="signup.html">Kayıt Ol</a>
+                           </li>
+                        </ul>
+                        <div class="sign_btn"><a href="#" id="myBtn">Giriş Yap</a></div>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+
+
+   <div>
+
+
+      <div id="myModal" class="modal">
+
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <label style="color: black" for="name">Kullanıcı Adı:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label style="color: black" for="pass"> Şifre:</label>
+            <input type="password" id="pass" name="pass"><br><br>
+            <a href="market.html" onclick="getInputValue();">Giriş Yap</a>
+         </div>
+
+      </div>
+   </div>
+   <section class="banner_main">
+      <div class="container">
+         <div class="row d_flex">
+            <div class="col-md-12">
+               <div class="text-bg">
+                  <h1>En ucuz araba parçaları</h1>
+                  <strong>Ücretsiz Kargo</strong>
+                  <span>Altan Car Part</span>
+                  <p>
+                     2015 Yılından beri sizlerle...
+
+                     <head></head>
+                  </p>
+                  <a href="#">Başlayalım</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   </div>
+
+   <div class="car">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>EN BÜYÜK MARKALAR </h2>
+                  <span>A'dan Z'ye bütün markalar için yedek parçalarımız bulunur</span>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-4 padding_leri">
+               <div class="car_box">
+                  <figure><img src="images/car_img1.png" alt="#" /></figure>
+                  <h3>Hyundai</h3>
+               </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+               <div class="car_box">
+                  <figure><img src="images/car_img2.png" alt="#" /></figure>
+                  <h3>Audi</h3>
+               </div>
+            </div>
+            <div class="col-md-4 padding_leri">
+               <div class="car_box">
+                  <figure><img src="images/car_img3.png" alt="#" /></figure>
+                  <h3>BMW</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+         </div>
+      </div>
+      <div>
+         <h2 style="color: white">Ürünlere Göz At</h2>
+      </div>
+      <div class="row">
+
+         <div class="card">
+            <img src="/images/ampul.jpg" style="width: 175px; height:175px;">
+            <h1> Ampul Yedek Parça</h1>
+            <p class="price">19.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+
+         <div class="card">
+            <img src="/images/buji.jpg" style="width: 275px; height:175px;">
+            <h1>Bentley Buji</h1>
+            <p class="price">19.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="images/bagaj.jpg" style="width: 275px; height:175px;">
+            <h1>Bagaj Amortisörü</h1>
+            <p class="price">100.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="images/krank.jpg" style="width: 275px; height:175px;">
+            <h1>Krank ve Volant Sensörleri</h1>
+            <p class="price">219.99 TL</p>
+            <p>Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/marşpi.jpg" style="width: 275px; height:180px;">
+            <h1>Marşpiyel Sacı</h1>
+            <p class="price">1944.99 TL</p>
+            <p>Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/frenn.jpg" style="width: 275px; height:175px;">
+            <h1>Fren Diski </h1>
+            <p class="price">269.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/alt.jpg" style="width: 275px; height:275px;">
+            <h1>Alternatör </h1>
+            <p class="price">49.99 TL</p>
+            <p>Logosuz Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/yea.jpg" style="width: 275px; height:175px;">
+            <h1>Yağ Filtresi</h1>
+            <p class="price">121.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/devir.jpg" style="width: 275px; height:175px;">
+            <h1>Devirdaim</h1>
+            <p class="price">215.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/amört.jpg" style="width: 275px; height:175px;">
+            <h1>Amortisör</h1>
+            <p class="price">39.99 TL</p>
+            <p>Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/keçe.jpg" style="width: 275px; height:175px;">
+            <h1> Motor Keçe </h1>
+            <p class="price">49.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/karter.jpg" style="width: 275px; height:175px;">
+            <h1>Sıcaklık Sensörü </h1>
+            <p class="price">49.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/salter.jpg" style="width: 275px; height:175px;">
+            <h1>Salterler ve Müşürler</h1>
+            <p class="price">51.99 TL</p>
+            <p>Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/tri.jpg" style="width: 275px; height:175px;">
+            <h1>Triger kayisi</h1>
+            <p class="price">60.99 TL</p>
+            <p>Logosuz Orijinal Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+         <div class="card">
+            <img src="/images/su.jpg" style="width: 275px; height:175px;">
+            <h1>Su Flanşı</h1>
+            <p class="price">47.99 TL</p>
+            <p>Muadil Yedek Parça</p>
+            <p><button onclick="handleAddBasket();">Sepete Ekle</button></p>
+         </div>
+
+      </div>
+   </div>
+   </div>
+
+   <div class="cutomer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Müşteri memnuniyeti</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div id="myCarousel" class="carousel slide cutomer_Carousel " data-ride="carousel">
+                  <ol class="carousel-indicators">
+                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                     <li data-target="#myCarousel" data-slide-to="1"></li>
+                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="container">
+                           <div class="carousel-caption ">
+                              <div class="cross_img">
+                                 <figure><img src="images/mami1.png" alt="#" /></figure>
+                              </div>
+                              <div class="our cross_layout">
+                                 <div class="test_box">
+                                    <h4>Muhammed Günaydın</h4>
+                                    <span>3 yıllık müşterimiz</span>
+                                    <p>Bir arkadaşımın tavsiyesi ile bulduğum sitede ilk başlarda fiyatların
+                                       ucuzluğundan dolayı replika ürün satıldığını düşünmüştüm fakat 3 yıldan beri hiç
+                                       düşünmeden siparişlerimi vermeye devam ediyorum</p>
+                                    <i><img src="images/te1.png" alt="#" /></i>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <div class="cross_img">
+                                 <figure><img src="images/ertu1.png" alt="#" /></figure>
+                              </div>
+                              <div class="our cross_layout">
+                                 <div class="test_box">
+                                    <h4>Ertuğrul Altuntaş</h4>
+                                    <span>İlk alışverişi</span>
+                                    <p>İnternette araba parçaları ararken rastgele denk geldiğim bir siteydi fakat iyiki
+                                       de denk gelmişim.Artık bütün siparişlerimi burdan vericem</p>
+                                    <i><img src="images/te1.png" alt="#" /></i>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <div class="cross_img">
+                                 <figure><img src="images/halil1.png" alt="#" /></figure>
+                              </div>
+                              <div class="our cross_layout">
+                                 <div class="test_box">
+                                    <h4>Halil Hasoğlu</h4>
+                                    <span>8 aylık müşterimiz</span>
+                                    <p>Mevcut piyasada araba parçası bulmak zor olmanın yanı sıra fiyatların pahalı
+                                       olmasından dolayı çok sorun çekiyordum.Altan Car Part ile bütün sorunlarım
+                                       çözüldü.Teşekkürler Altan Car Part</p>
+                                    <i><img src="images/te1.png" alt="#" /></i>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="cont_call">
+                     <h3> <strong class="multi color_chang"> Bize Ulaşın</strong><br>
+                        (+90) 123 45 67
+                     </h3>
+                  </div>
+                  <div class="cont">
+                     <h3> <strong class="multi"> Ücretsiz Kargo</strong>
+                        Türkiyede 1 Numara
+                     </h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>© 2022 Bütün hakları saklıdır.Altan Car Part</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script>
+      function handleAbout() {
+         alert("Bu sayfa henüz yapım aşamasındadır.Lütfen daha sonra tekrar deneyiniz");
+      }
+   </script>
+   <script>
+      function getInputValue() {
+         var inputName = document.getElementById("name").value;
+         alert(inputName + " kullanıcı adlı hesap ile girişiniz gerçekleşmiştir.");
+      }
+   </script>
+   <script>
+      function handleAddBasket() {
+         alert("Ürün sepetinize eklenmiştir.");
+      }
+   </script>
+   <script>
+      function handleAddBasket() {
+         alert("Sepetinize ürün ekleyebilmek için giriş yapmalısınız.");
+      }
+   </script>
+   <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function () {
+         modal.style.display = "block";
+      }
+      span.onclick = function () {
+         modal.style.display = "none";
+      }
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = "none";
+         }
+      }
+   </script>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
